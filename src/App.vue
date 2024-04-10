@@ -85,6 +85,7 @@
       </section>
     </aside>
   </main>
+  <img src="" alt="" />
   <footer>
     <img src="./assets/logo-senai-footer.png" alt="Logo Senai" />
   </footer>
@@ -93,6 +94,10 @@
 <script lang="ts">
 import UnitCard from './components/UnitCard.vue';
 import CourseCard from './components/CourseCard.vue';
+
+import senaiArapiraca from './assets/senai_arapiraca.png';
+import senaiBeneditoBentes from './assets/senai_benedito_bentes.png';
+import senaiPoco from './assets/senai_poco.png';
 
 export default {
   components: {
@@ -103,19 +108,19 @@ export default {
     return {
       unidades: [
         {
-          imagePath: 'https://i.imgur.com/b47KSHw.png',
+          imagePath: senaiArapiraca,
           title: 'Senai Arapiraca',
           description:
             'As equipes do SESI orientam as empresas na implementação e no uso correto da ferramenta. ',
         },
         {
-          imagePath: 'https://i.imgur.com/sPhuGED.png',
+          imagePath: senaiBeneditoBentes,
           title: 'Senai Benedito Bentes',
           description:
             'As equipes do SESI orientam as empresas na implementação e no uso correto da ferramenta. ',
         },
         {
-          imagePath: 'https://i.imgur.com/Xm0SYwr.png',
+          imagePath: senaiPoco,
           title: 'Senai Poço',
           description:
             'As equipes do SESI orientam as empresas na implementação e no uso correto da ferramenta. ',
