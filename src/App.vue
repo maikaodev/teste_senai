@@ -412,6 +412,10 @@ footer {
     button {
       display: none;
     }
+
+    .navigationsm {
+      display: none;
+    }
     .navigation {
       display: block;
 
