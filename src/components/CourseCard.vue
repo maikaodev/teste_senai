@@ -1,5 +1,5 @@
 <template>
-  <img src="../assets/chocotone.jpg" alt="Chocotone" />
+  <img src="../assets/chocotone.jpg" alt="Chocotone" loading="lazy" />
   <div class="content">
     <h3>fabricação de panetones e chocotones</h3>
     <p>

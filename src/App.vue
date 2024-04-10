@@ -1,8 +1,8 @@
 <template>
   <header>
-    <img src="./assets/logo-senai.png" alt="Logo" />
+    <img src="./assets/logo-senai.png" alt="Logo" loading="lazy" />
     <button @click="toggleDrawer">
-      <img src="./assets/Nav menu.png" alt="Menu" />
+      <img src="./assets/Nav menu.png" alt="Menu" loading="lazy" />
     </button>
 
     <nav class="navigationsm" v-if="drawer">
@@ -24,7 +24,7 @@
     </nav>
   </header>
   <div class="background-header">
-    <img src="./assets/background-banner.jpeg" alt="Banner" />
+    <img src="./assets/background-banner.jpeg" alt="Banner" loading="lazy" />
     <div>
       <h1>Sobre o SENAI</h1>
       <p>Pelo Futuro do Ensino</p>
@@ -95,9 +95,9 @@
       </section>
     </aside>
   </main>
-  <img src="" alt="" />
+
   <footer>
-    <img src="./assets/logo-senai-footer.png" alt="Logo Senai" />
+    <img src="./assets/logo-senai-footer.png" alt="Logo Senai" loading="lazy" />
   </footer>
 </template>
 

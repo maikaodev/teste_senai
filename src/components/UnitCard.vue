@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <img :src="imagePath" :alt="title" />
+    <img :src="imagePath" :alt="title" loading="lazy" />
     <div class="description">
       <h3>{{ title }}</h3>
       <p>{{ description }}</p>
@@ -33,7 +33,6 @@ export default {
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
 
   padding: 16px 0;
@@ -51,6 +50,9 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+
+    height: 168px;
 
     gap: 16px;
     h3 {
@@ -89,7 +91,6 @@ export default {
 
     img {
       width: 100px;
-      height: 168px;
 
       border-radius: 10px;
 
@@ -117,7 +118,6 @@ export default {
 @media screen and (min-width: 1439px) {
   .container {
     flex-direction: row;
-    justify-content: space-around;
 
     gap: 24px;
 
