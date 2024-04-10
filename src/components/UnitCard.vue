@@ -1,7 +1,6 @@
 <template>
   <div>
-    <!-- <img :src="imagePath" :alt="title" /> -->
-    <img src="../assets/senai_arapiraca.png" alt="" />
+    <img :src="imagePath" :alt="title" />
     <div class="description">
       <h3>{{ title }}</h3>
       <p>{{ description }}</p>
