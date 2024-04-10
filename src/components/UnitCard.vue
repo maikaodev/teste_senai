@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <img :src="imagePath" :alt="title" />
     <div class="description">
       <h3>{{ title }}</h3>
@@ -30,7 +30,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-div {
+.container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -47,31 +47,42 @@ div {
     object-fit: cover;
   }
 
-  h3 {
-    font-weight: bolder;
-    font-size: 24px;
-  }
-  p {
-    font-family: 'Open Sans';
+  .description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    font-weight: 300;
+    gap: 16px;
+    h3 {
+      font-weight: bolder;
+      font-size: 24px;
+      margin: 0;
+    }
+    p {
+      font-family: 'Open Sans';
 
-    text-align: center;
-  }
-  a {
-    padding: 4px 24px;
+      font-weight: 300;
 
-    border-radius: 10px;
+      text-align: center;
+    }
+    a {
+      padding: 4px 24px;
 
-    background-color: #2a549f;
-    color: #ffffff;
+      width: 113px;
 
-    text-decoration: none;
+      border-radius: 10px;
+
+      background-color: #2a549f;
+      color: #ffffff;
+
+      text-decoration: none;
+      text-align: center;
+    }
   }
 }
 
 @media screen and (min-width: 500px) {
-  div {
+  .container {
     flex-direction: row;
 
     gap: 24px;
@@ -87,11 +98,28 @@ div {
     .description {
       display: flex;
       flex-direction: column;
+      h3 {
+        margin: 0;
+      }
 
-      margin: 16px 0;
+      gap: 16px;
+
       p {
         text-align: left;
       }
+    }
+  }
+}
+
+@media screen and (min-width: 1439px) {
+  .container {
+    flex-direction: row;
+
+    gap: 24px;
+
+    img {
+      width: 250px;
+      object-fit: contain;
     }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <img src="../assets/chocotone.jpg" alt="" />
+  <img src="../assets/chocotone.jpg" alt="Chocotone" />
   <div class="content">
     <h3>fabricação de panetones e chocotones</h3>
     <p>
@@ -22,18 +22,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+img {
+  object-fit: contain;
+}
+
 .content {
   background-color: #f8f8f8;
-
-  padding: 0 8px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  gap: 16px;
+  padding: 0 8px;
+  padding-bottom: 16px;
+
+  border-radius: 0 0 8px 8px;
 
   h3 {
     font-weight: 700;
     text-transform: uppercase;
     color: #00489a;
+
+    margin: 0;
   }
   p {
     font-size: 12px;

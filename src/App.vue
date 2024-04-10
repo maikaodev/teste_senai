@@ -13,55 +13,81 @@
       </ul>
     </nav>
   </header>
-
-  <section class="background-header">
+  <div class="background-header">
     <img src="./assets/background-banner.jpeg" alt="Banner" />
     <div>
       <h1>Sobre o SENAI</h1>
       <p>Pelo Futuro do Ensino</p>
     </div>
-  </section>
+  </div>
 
   <main>
-    <h2>Unidades</h2>
-    <p>
-      Fazendo parte de um sistema nacional, composto por 27 federações estaduais
-      e guiado pela Confederação Nacional da Indústria (CNI), o Serviço Nacional
-      de Aprendizagem Industrial de Alagoas (SENAI/AL) é uma instituição de
-      destaque, reconhecida por sua atuação de excelência na formação e
-      capacitação profissional.
-      <br />
-      <br />
-      Nossa missão é contribuir para o crescimento econômico de Alagoas,
-      promovendo a qualificação da mão de obra, a disseminação de conhecimento
-      tecnológico e o fortalecimento do setor industrial. Estamos comprometidos
-      em impulsionar a indústria local e, assim, contribuir para o
-      desenvolvimento do estado.
-    </p>
+    <div class="container">
+      <h2>Unidades</h2>
+      <p>
+        Fazendo parte de um sistema nacional, composto por 27 federações
+        estaduais e guiado pela Confederação Nacional da Indústria (CNI), o
+        Serviço Nacional de Aprendizagem Industrial de Alagoas (SENAI/AL) é uma
+        instituição de destaque, reconhecida por sua atuação de excelência na
+        formação e capacitação profissional.
+        <br />
+        <br />
+        Nossa missão é contribuir para o crescimento econômico de Alagoas,
+        promovendo a qualificação da mão de obra, a disseminação de conhecimento
+        tecnológico e o fortalecimento do setor industrial. Estamos
+        comprometidos em impulsionar a indústria local e, assim, contribuir para
+        o desenvolvimento do estado.
+      </p>
 
-    <section class="units">
-      <ul>
-        <li v-for="(unidade, index) in unidades" :key="index">
-          <UnitCard
-            :imagePath="unidade.imagePath"
-            :title="unidade.title"
-            :description="unidade.description"
-          />
-        </li>
-      </ul>
-    </section>
+      <section class="units">
+        <ul>
+          <li v-for="(unidade, index) in unidades" :key="index">
+            <UnitCard
+              :imagePath="unidade.imagePath"
+              :title="unidade.title"
+              :description="unidade.description"
+            />
+          </li>
+        </ul>
+      </section>
 
-    <section class="courses">
-      <ul>
-        <li>
-          <CourseCard />
-        </li>
-        <li>
-          <CourseCard />
-        </li>
-      </ul>
-    </section>
+      <section class="courses">
+        <ul>
+          <li>
+            <CourseCard />
+          </li>
+          <li>
+            <CourseCard />
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <aside>
+      <section>
+        <h2>Conheça</h2>
+        <nav>
+          <li><a href="#" class="active">Sobre a SENAI</a></li>
+          <li><a href="#">Diretoria e Equipe Executiva</a></li>
+          <li><a href="#">Vagas abertas</a></li>
+          <li><a href="#">Todas as Unidades</a></li>
+        </nav>
+      </section>
+
+      <section>
+        <h2>Transparência</h2>
+        <nav>
+          <li><a href="#">Transparência SENAI</a></li>
+          <li><a href="#">Prestação de Contas TCU</a></li>
+          <li><a href="#">Política de Privacidade</a></li>
+          <li><a href="#">Segurança da Informação</a></li>
+        </nav>
+      </section>
+    </aside>
   </main>
+  <footer>
+    <img src="./assets/logo-senai-footer.png" alt="Logo Senai" />
+  </footer>
 </template>
 
 <script lang="ts">
@@ -124,6 +150,7 @@ header {
     display: none;
   }
 }
+
 .background-header {
   width: 100%;
   height: 250px;
@@ -147,15 +174,21 @@ header {
   }
 
   div {
-    width: 100%;
     height: 100%;
+
+    color: #ffffff;
 
     position: absolute;
 
-    top: 80px;
-    left: 15px;
+    top: 0;
+
+    margin-left: 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
     z-index: 3;
-    color: #ffffff;
 
     h1 {
       font-size: 40px;
@@ -167,61 +200,115 @@ header {
   }
 }
 main {
-  margin: 0 16px;
-
-  h2 {
-    font-size: 32px;
+  aside {
+    display: none;
   }
-  p {
-    font-family: 'Open Sans';
-    font-weight: 300;
-    font-size: 16px;
 
-    padding: 0;
-  }
-  .units {
-    ul {
-      padding: 0;
+  .container {
+    display: flex;
+    flex-direction: column;
 
-      li {
-        max-width: 778px;
-        border-radius: 10px;
+    gap: 24px;
 
-        background-color: #f8f8f8;
+    padding: 16px;
 
-        gap: 16px;
-        padding: 0 16px;
+    h2 {
+      font-size: 32px;
 
-        list-style: none;
-      }
+      margin: 0;
     }
-  }
-  .courses {
-    ul {
+    p {
       font-family: 'Open Sans';
+      font-weight: 300;
+      font-size: 16px;
 
       padding: 0;
-      list-style: none;
-      li {
-        max-width: 373px;
+      margin: 0;
+    }
 
-        max-height: 195px;
+    .units {
+      ul {
+        padding: 0;
+        margin-top: 0;
 
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
 
         gap: 16px;
+
+        li {
+          border-radius: 10px;
+
+          background-color: #f8f8f8;
+
+          gap: 16px;
+
+          list-style: none;
+        }
+      }
+    }
+
+    .courses {
+      ul {
+        width: 100%;
+
+        font-family: 'Open Sans';
+
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        margin-top: 0;
+
+        padding: 0;
+        list-style: none;
+
+        li {
+          width: 100%;
+
+          display: flex;
+          flex-direction: column;
+
+          gap: 16px;
+        }
       }
     }
   }
 }
 
+footer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(1, 72, 152, 1);
+
+  img {
+    width: 160px;
+
+    margin: 24px 0;
+    object-fit: contain;
+  }
+}
+
 @media screen and (min-width: 500px) {
-  .courses {
-    ul {
-      display: flex;
-      flex-direction: row;
-      gap: 16px;
+  main {
+    .container {
+      .courses {
+        ul {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+
+          li {
+            width: 80%;
+          }
+        }
+      }
     }
   }
 }
@@ -253,13 +340,103 @@ main {
       }
     }
   }
+}
 
-  .background-header {
-    div {
-      top: 80px;
-      left: 50px;
+@media screen and (min-width: 1023px) {
+  main {
+    display: flex;
+    flex-direction: row;
+
+    padding: 24px;
+    margin: 0px;
+
+    .container {
+      flex: 1;
+
+      .units {
+        width: 778px;
+
+        ul {
+          li {
+            width: 778px;
+          }
+        }
+      }
+      .courses {
+        width: 778px;
+
+        ul {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          li {
+            flex: 1;
+            width: 373px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1439px) {
+  main {
+    .container {
+      flex: 1;
+
+      .units {
+        width: 100%;
+
+        ul {
+          li {
+            width: 100%;
+          }
+        }
+      }
+
+      .courses {
+        width: 100%;
+      }
+    }
+    aside {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      flex: 1;
+
+      gap: 50px;
+
+      font-family: Inter;
+
+      section {
+        width: 390px;
+
+        background-color: rgba(237, 237, 237, 0.5);
+        padding: 16px;
+        border-radius: 8px;
+
+        nav {
+          list-style: none;
+
+          li {
+            font-size: 16px;
+
+            line-height: 24px;
+            a {
+              text-decoration: none;
+              color: rgba(0, 24, 52, 1);
+              &.active {
+                color: rgba(42, 84, 159, 1);
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
 </style>
+
+746
 
