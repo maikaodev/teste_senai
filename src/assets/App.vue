@@ -5,11 +5,9 @@
       <img src="./assets/Nav menu.png" alt="Menu" />
     </button>
   </header>
-
   <section>
     <img src="./assets/Background-banner.png" alt="" />
   </section>
-
   <main>
     <h2>Unidades</h2>
     <p>
@@ -26,56 +24,42 @@
       em impulsionar a indústria local e, assim, contribuir para o
       desenvolvimento do estado.
     </p>
-
-    <section class="units">
-      <ul v-for="unidade in unidades">
-        <li>
-          <UnitCard
-            :imagePath="unidade.imagePath"
-            :title="unidade.title"
-            :description="unidade.description"
-          />
-        </li>
-      </ul>
-    </section>
-
-    <section class="courses">
-      <ul>
-        <li>
-          <CourseCard />
-          <CourseCard />
-        </li>
-      </ul>
-    </section>
+    <ul v-for="unidade in unidades">
+      <li>
+        <Card
+          :imagePath="unidade.imagePath"
+          :title="unidade.title"
+          :description="unidade.description"
+        />
+      </li>
+    </ul>
   </main>
 </template>
 
 <script lang="ts">
-import UnitCard from './components/UnitCard.vue';
-import CourseCard from './components/CourseCard.vue';
+import Card from './components/Units_cards.vue';
 
 export default {
   components: {
-    UnitCard,
-    CourseCard,
+    Card,
   },
   data() {
     return {
       unidades: [
         {
-          imagePath: './assets/senai_arapiraca.png',
+          imagePath: '../assets/senai_arapiraca.png',
           title: 'Senai Arapiraca',
           description:
             'As equipes do SESI orientam as empresas na implementação e no uso correto da ferramenta. ',
         },
         {
-          imagePath: './assets/senai_arapiraca.png',
+          imagePath: '../assets/senai_arapiraca.png',
           title: 'Senai Benedito Bentes',
           description:
             'As equipes do SESI orientam as empresas na implementação e no uso correto da ferramenta. ',
         },
         {
-          imagePath: './assets/senai_arapiraca.png',
+          imagePath: '../assets/senai_arapiraca.png',
           title: 'Senai Poço',
           description:
             'As equipes do SESI orientam as empresas na implementação e no uso correto da ferramenta. ',
@@ -83,6 +67,7 @@ export default {
       ],
     };
   },
+  methods: {},
 };
 </script>
 
@@ -108,14 +93,15 @@ header {
   }
 }
 section {
+  width: 500px;
+  height: 250px;
   img {
     width: 100%;
     height: 100%;
   }
 }
 main {
-  margin: 0 16px;
-
+  padding: 0 16px;
   h2 {
     font-size: 32px;
   }
@@ -123,38 +109,21 @@ main {
     font-family: 'Open Sans';
     font-weight: 300;
     font-size: 16px;
-
+  }
+  ul {
     padding: 0;
-  }
-  .units {
-    ul {
-      padding: 0;
+    li {
+      display: flex;
+      height: 213px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 16px;
 
-      li {
-        max-width: 778px;
-        border-radius: 10px;
+      border-radius: 10px;
 
-        background-color: #f8f8f8;
-
-        gap: 16px;
-        padding: 0 16px;
-
-        list-style: none;
-      }
-    }
-  }
-  .courses {
-    ul {
-      font-family: 'Open Sans';
-
-      padding: 0;
+      background-color: #f8f8f8;
+      gap: 16px;
       list-style: none;
-      li {
-        display: flex;
-        flex-direction: column;
-
-        gap: 16px;
-      }
     }
   }
 }
