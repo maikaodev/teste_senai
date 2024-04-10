@@ -98,6 +98,9 @@ export default {
     .description {
       display: flex;
       flex-direction: column;
+
+      align-items: flex-start;
+
       h3 {
         margin: 0;
       }
@@ -114,12 +117,25 @@ export default {
 @media screen and (min-width: 1439px) {
   .container {
     flex-direction: row;
+    justify-content: space-around;
 
     gap: 24px;
 
     img {
       width: 250px;
       object-fit: contain;
+    }
+
+    .description {
+      h3 {
+        margin: 0;
+      }
+
+      gap: 16px;
+
+      p {
+        text-align: left;
+      }
     }
   }
 }
