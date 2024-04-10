@@ -13,7 +13,7 @@ Via HTTPS
 
 ```bash
 ## Clone o projeto
-git https://github.com/maikaodev/teste_senai.git
+git clone https://github.com/maikaodev/teste_senai.git
 
 ## Instale as dependências
 npm i ou npm install
