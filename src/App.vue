@@ -1,9 +1,19 @@
 <template>
   <header>
     <img src="./assets/logo-senai.png" alt="Logo" />
-    <button>
+    <button @click="toggleDrawer">
       <img src="./assets/Nav menu.png" alt="Menu" />
     </button>
+
+    <nav class="navigationsm" v-if="drawer">
+      <ul>
+        <li><a href="#">Institucional</a></li>
+        <li><a href="#">Para Empresas</a></li>
+        <li><a href="#">Fale Conosco</a></li>
+        <li><a href="#">Transparência</a></li>
+      </ul>
+    </nav>
+
     <nav class="navigation">
       <ul>
         <li><a href="#">Institucional</a></li>
@@ -106,6 +116,7 @@ export default {
   },
   data() {
     return {
+      drawer: false,
       unidades: [
         {
           imagePath: senaiArapiraca,
@@ -127,6 +138,11 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    toggleDrawer() {
+      this.drawer = !this.drawer;
+    },
   },
 };
 </script>
@@ -151,8 +167,81 @@ header {
 
     cursor: pointer;
   }
-  nav {
+
+  .navigation {
     display: none;
+  }
+
+  .navigationsm {
+    @-webkit-keyframes scale-up-hor-right {
+      0% {
+        -webkit-transform: scaleX(0.4);
+        transform: scaleX(0.4);
+        -webkit-transform-origin: 100% 100%;
+        transform-origin: 100% 100%;
+      }
+      100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        -webkit-transform-origin: 100% 100%;
+        transform-origin: 100% 100%;
+      }
+    }
+    @keyframes scale-up-hor-right {
+      0% {
+        -webkit-transform: scaleX(0.4);
+        transform: scaleX(0.4);
+        -webkit-transform-origin: 100% 100%;
+        transform-origin: 100% 100%;
+      }
+      100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        -webkit-transform-origin: 100% 100%;
+        transform-origin: 100% 100%;
+      }
+    }
+
+    position: absolute;
+
+    width: 150px;
+    top: 60px;
+    right: 0;
+    z-index: 4;
+
+    height: 100%;
+
+    background-color: #ffffff;
+
+    transition: all 0.75s;
+    -webkit-animation: scale-up-hor-right 0.4s
+      cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: scale-up-hor-right 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+
+      width: 100%;
+
+      padding: 0;
+      margin-left: 4px;
+
+      gap: 4px;
+      list-style: none;
+      li {
+        line-height: 24px;
+        background: rgba(0, 72, 154);
+        padding: 8px 16px;
+
+        cursor: pointer;
+        a {
+          text-decoration: none;
+
+          color: #ffffff;
+        }
+      }
+    }
   }
 }
 
@@ -323,8 +412,9 @@ footer {
     button {
       display: none;
     }
-    nav {
+    .navigation {
       display: block;
+
       ul {
         font-family: 'Open Sans';
         font-weight: 600;
