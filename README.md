@@ -33,7 +33,6 @@ npm run dev
 
 - [Deploy](https://senaibymaikaodev.netlify.app/)
 - [Protótipo](https://www.figma.com/file/AWwfT7R3rgdDhWqdVn9obD/Teste-estagiarios?type=design&node-id=0-1&mode=design&t=S7wPQ49311cEqkGX-0)
->>>>>>> Stashed changes
 
 ### Ferramentas
 
