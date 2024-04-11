@@ -4,7 +4,6 @@
 
 - Candidato: Angelo Danrley Oliveira Santos
 - E-mail: angelodanrley.os@gmail.com
-- CPF: 112.778.284-31
 
 ## O que você precisa ter para rodar o projeto?
 
