@@ -21,6 +21,9 @@ Via HTTPS
 ## Clone o projeto
 git clone https://github.com/maikaodev/teste_senai.git
 
+## Entre na pasta
+cd teste_senai
+
 ## Instale as dependências
 npm i ou npm install
 
