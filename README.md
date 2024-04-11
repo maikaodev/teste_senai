@@ -1,8 +1,6 @@
 # Test senai
 
 ## O que você precisa ter para rodar o projeto?
-<<<<<<< Updated upstream
-=======
 
 ### Ferramentas
 
