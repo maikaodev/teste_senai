@@ -153,7 +153,7 @@ header {
   justify-content: space-between;
   align-items: center;
 
-  height: 60px;
+  height: 80px;
 
   padding: 0 16px;
 
@@ -205,7 +205,7 @@ header {
     position: absolute;
 
     width: 150px;
-    top: 60px;
+    top: 80px;
     right: 0;
     z-index: 4;
 
@@ -274,9 +274,9 @@ header {
 
     position: absolute;
 
-    top: 0;
+    bottom: 20px;
 
-    margin-left: 24px;
+    margin-left: 16px;
 
     display: flex;
     flex-direction: column;
@@ -286,6 +286,7 @@ header {
 
     h1 {
       font-size: 40px;
+      margin: 0;
     }
 
     p {
@@ -293,6 +294,7 @@ header {
     }
   }
 }
+
 main {
   aside {
     display: none;
@@ -301,10 +303,12 @@ main {
   .container {
     display: flex;
     flex-direction: column;
+    max-width: 778px;
 
     gap: 24px;
 
-    padding: 16px;
+    padding: 0 16px;
+    margin-top: 48px;
 
     h2 {
       font-size: 32px;
@@ -321,15 +325,17 @@ main {
     }
 
     .units {
+      margin-top: 20px;
+      max-width: 778px;
+
       ul {
         padding: 0;
-        margin-top: 0;
 
         display: flex;
         flex-direction: column;
         justify-content: space-between;
 
-        gap: 16px;
+        gap: 32px;
 
         li {
           border-radius: 10px;
@@ -360,6 +366,8 @@ main {
 
         li {
           width: 100%;
+
+          background-color: rgba(248, 248, 248, 1);
 
           display: flex;
           flex-direction: column;
@@ -423,13 +431,13 @@ footer {
         font-family: 'Open Sans';
         font-weight: 600;
         font-size: 14px;
-
+        padding: 0;
         list-style: none;
 
         display: flex;
         align-items: center;
 
-        gap: 16px;
+        gap: 20px;
         li {
           a {
             color: #0d2536;
@@ -442,6 +450,15 @@ footer {
 }
 
 @media screen and (min-width: 1023px) {
+  header {
+    padding: 0 40px;
+  }
+  .background-header {
+    div {
+      margin-left: 40px;
+    }
+  }
+
   main {
     display: flex;
     flex-direction: row;
@@ -450,8 +467,6 @@ footer {
     margin: 0px;
 
     .container {
-      flex: 1;
-
       .units {
         width: 778px;
 
@@ -479,9 +494,17 @@ footer {
 }
 
 @media screen and (min-width: 1439px) {
+  header {
+    padding: 0 80px;
+  }
+  .background-header {
+    div {
+      margin-left: 80px;
+    }
+  }
   main {
     .container {
-      flex: 1;
+      margin: 0 auto;
 
       .units {
         width: 100%;
@@ -501,8 +524,7 @@ footer {
       display: flex;
       flex-direction: column;
       align-items: center;
-
-      flex: 1;
+      margin: 0 auto;
 
       gap: 50px;
 
@@ -512,11 +534,21 @@ footer {
         width: 390px;
 
         background-color: rgba(237, 237, 237, 0.5);
-        padding: 16px;
+        padding: 32px 24px;
         border-radius: 8px;
+
+        h2 {
+          margin: 0;
+          margin-top: 16px;
+          font-size: 24px;
+        }
 
         nav {
           list-style: none;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          margin-top: 16px;
 
           li {
             font-size: 16px;
@@ -535,7 +567,15 @@ footer {
     }
   }
 }
+@media screen and (min-width: 2500px) {
+  header {
+    padding: 0 360px;
+  }
+  .background-header {
+    div {
+      margin-left: 360px;
+    }
+  }
+}
 </style>
-
-746
 

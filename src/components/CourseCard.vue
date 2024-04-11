@@ -27,7 +27,7 @@ img {
 }
 
 .content {
-  background-color: #f8f8f8;
+  background-color: rgba(248, 248, 248, 1);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,6 +40,7 @@ img {
 
   h3 {
     font-weight: 700;
+    font-size: 16px;
     text-transform: uppercase;
     color: #00489a;
 
@@ -53,8 +54,11 @@ img {
 
     font-size: 14px;
     color: #00244d;
+
     strong {
       font-weight: bolder;
+      font-size: 18px;
+      color: rgba(0, 36, 77, 1);
     }
   }
   a {
@@ -73,6 +77,15 @@ img {
     border-radius: 8px;
 
     cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .content {
+    padding: 12px 32px 12px 32px;
+    h3 {
+      width: 80%;
+    }
   }
 }
 </style>
