@@ -1,4 +1,4 @@
-# Test senai
+# Teste senai
 
 ## O que você precisa ter para rodar o projeto?
 
