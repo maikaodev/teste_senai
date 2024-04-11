@@ -1,6 +1,6 @@
 # Teste senai
 
-## Dados do candidato:
+## Dados do candidato
 
 - Candidato: Angelo Danrley Oliveira Santos
 - E-mail: angelodanrley.os@gmail.com
